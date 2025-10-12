@@ -15,7 +15,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <100>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
             // Keys on the right side of the keyboard (Positions 21 to 41)
@@ -30,7 +30,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <100>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
             // Keys on the left side of the keyboard (Positions 0 to 20)
