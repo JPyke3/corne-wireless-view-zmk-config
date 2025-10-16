@@ -23,6 +23,17 @@
 SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
 SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 
+// Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <.
+SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
+SIMPLE_MORPH(comma_inner_morph, CTL, &kp SEMICOLON, &kp LESS_THAN)
+
+// Tap: dot | Shift + tap: colon | Ctrl + shift + tap: >.
+SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
+SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
+
+// Tap: qmark | Shift + tap: excl.
+SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
+
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2
@@ -50,8 +61,8 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 #endif
 
 ZMK_BASE_LAYER(Base,
-   XXX &kp B      &kp L       &kp D        &kp W        &kp Z,       &kp Y   &kp F         &kp O          &kp U         &kp J      XXX,
+   XXX &kp B      &kp L       &kp D        &kp W        &kp Z,       &kp SQT &kp F         &kp O          &kp U         &kp J      XXX,
    XXX &hml GUI N &hml LALT R &hml LSHFT T &hml LCTRL S &kp G,       &kp Y   &hmr RCTRL H  &hmr RSHFT A   &hmr RALT E   &hmr GUI I XXX,
-   XXX &kp Q      &kp X       &kp M        &kp C        &kp V,       &kp K   &kp P         &kp COMMA      &kp DOT       &kp FSLH   XXX,
+   XXX &kp Q      &kp X       &kp M        &kp C        &kp V,       &kp K   &kp P         &comma_morph   &dot_morph    &qexcl     XXX,
                               &kp LGUI     &mo 1        &kp SPACE,   &kp RET &mo 2         &kp RALT
 )
