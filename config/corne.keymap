@@ -93,7 +93,7 @@ ZMK_BASE_LAYER(Fn,
 )
 
 ZMK_BASE_LAYER(Sys,
-   $bt BT_CLR &bt 0       &bt 1        &bt 2         &bt 3         &bt 4,       ___     ___         ___            ___           ___        ___,
+   $bt BT_CLR &bt BT_SEL 0       &bt BT_SEL 1        &bt BT_SEL 2         &bt BT_SEL 3         &bt BT_SEL 4,       ___     ___         ___            ___           ___        ___,
    ___ ___         ___          ___           ___             ___,       ___     ___         ___            ___           ___        ___,
    ___ ___         ___          ___           ___             ___,       ___     ___         ___            ___           ___        ___,
                                 ___           ___             ___,       ___     ___         ___
