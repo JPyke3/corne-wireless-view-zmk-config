@@ -135,7 +135,7 @@ ZMK_BASE_LAYER(Sys,
 
 ZMK_BASE_LAYER(Nav,
    ___ ___         ___          ___           ___             ___,       ___     NAV_BSPC    ___            NAV_DEL       ___        ___,
-   ___ ___         ___          ___           ___             ___,       ___     NAV_LEFT    NAV_DOWN       NAV_UP        NAV_RIGHT  ___,
+   ___ ___         ___          ___           ___             ___,       NAV_LEFT    NAV_DOWN       NAV_UP        NAV_RIGHT  ___     ___,
    ___ ___         ___          ___           ___             ___,       ___     ___         ___            ___           ___        ___,
                                 ___           ___             ___,       ___     ___         ___
 )
