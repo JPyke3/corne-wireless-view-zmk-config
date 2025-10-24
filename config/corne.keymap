@@ -16,6 +16,8 @@
 #define NAV 4
 #define MOUSE 5
 #define QWERTY 6
+#define GAMING 7
+#define GAMNUM 8
 
 // Define mod-morph with a *single* mod trigger for less repetition.
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2)                            \
@@ -118,7 +120,7 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
 ZMK_BASE_LAYER(Base,
    XXX &kp B      &kp L       &kp D        &kp W        &kp Z,       &kp SQT &kp F         &kp O          &kp U         &kp J      XXX,
    XXX &hml LGUI N &hml LALT R &hml LSHFT T &hml LCTRL S &kp G,       &kp Y   &hmr RCTRL H  &hmr RSHFT A   &hmr RALT E   &hmr RGUI I XXX,
-   XXX &kp Q      &kp X       &kp M        &kp C        &kp V,       &kp K   &kp P         &comma_morph   &dot_morph    &qexcl     &to QWERTY,
+   XXX &kp Q      &kp X       &kp M        &kp C        &kp V,       &kp K   &kp P         &comma_morph   &dot_morph    &qexcl     &to GAMING,
                               &kp LGUI     &lt_spc NAV 0 &lt FN SPACE,   &kp RET SMART_NUM     &kp RALT
 )
 
@@ -166,5 +168,15 @@ ZMK_BASE_LAYER(Qwerty,
    XXX &kp Z      &kp X       &kp C        &kp V        &kp B,       &kp N   &kp M         &comma_morph   &dot_morph    &qexcl     &to DEF,
                               &kp LGUI     &lt_spc NAV 0 &lt FN SPACE,   &kp RET SMART_NUM     &kp RALT
 )
-
-
+ZMK_BASE_LAYER(Gaming,
+   &kp ESC   &kp Q      &kp F       &kp E        &kp R        &kp T,       &kp Y   &kp U         &kp I          &kp O         &kp P      XXX,
+   &kp TAB   &kp S      &kp A       &kp W        &kp D        &kp G,       &kp H   &hmr RCTRL J  &hmr RSHFT K   &hmr RALT L   &hmr RGUI I XXX,
+   &kp LSHFT &kp Z      &kp X       &kp C        &kp V        &kp B,       &kp N   &kp M         &comma_morph   &dot_morph    &qexcl     &to DEF,
+                              &mo GAMNUM  &kp E &kp SPACE,   &kp RET SMART_NUM     &kp RALT
+)
+ZMK_BASE_LAYER(GameNum,
+   ___ ___      &kp N4      &kp N5      &kp N6        ___,       ___   ___   ___   ___   ___  ___,
+   ___ &kp N0   &kp N1      &kp N2      &kp N3        ___,       ___   ___   ___   ___   ___  ___,
+   ___ ___      &kp N7      &kp N8      &kp N9        ___,       ___   ___   ___   ___   ___  ___,
+                              ___     ___ ___,   ___ ___     ___
+)
